@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "7b464f2a-182a-4620-a06b-df51b962666a",
+		"name": "MusicRoom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23288972"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Ronak Bothra\",\r\n  \"email\": \"rj.rjain567@gmail.com\",\r\n  \"password\": \"Ronak@567\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://musicroombackend-2.onrender.com/api/auth/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"rj.rjain567@gmail.com\",\r\n  \"password\": \"Ronak@567\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://musicroombackend-2.onrender.com/api/auth/signin"
+			},
+			"response": []
+		},
+		{
+			"name": "getCourses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODM5YTM4ZTM3ZjU1YzU5YzdmYjc5YiIsImlhdCI6MTc1MzY0NzM1MywiZXhwIjoxNzU2MjM5MzUzfQ.MVR1H3w9tPFBBsz-9lzds383fRTkNjBpoQtJ2zKfm6c",
+						"type": "text"
+					}
+				],
+				"url": "https://musicroombackend-2.onrender.com/api/courses"
+			},
+			"response": []
+		},
+		{
+			"name": "getCourseById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/api/courses/68839e8fbb02f7979b286b94"
+			},
+			"response": []
+		},
+		{
+			"name": "createBooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"68839a38e37f55c59c7fb79b\",\r\n  \"courseId\": \"68839e8fbb02f7979b286b94\",\r\n  \"preferredSchedule\": \"2025-08-15\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://musicroombackend-2.onrender.com/api/bookings"
+			},
+			"response": []
+		}
+	]
+}
